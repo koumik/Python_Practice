@@ -1,13 +1,11 @@
-# 4)To enter a number and find the factorial of that number
+# 5) To find factorial of a number. Function Accepts number as an arguments.
 
-num=input("Enter the Number : \n")
-f=1
-if num<0:
-    print "Not applicable"
-elif num==0:
-    print " Factorial is 1 "
-else:
-    for i in range(1,num+1):
-        f=f*i
-    print "The factorial of %d is : %d" %(num,f)
 
+def factorial(n):
+    if n==0:
+        return 1
+    else:
+        return n * factorial(n-1)
+    
+n=int(input("Enter a Number : "))
+print(factorial(n))
